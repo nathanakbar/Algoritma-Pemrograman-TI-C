@@ -1,0 +1,22 @@
+def bilangan_prima(n):
+    prima = []
+    
+    for angka in range(2, n + 1):
+        is_prima = True
+        for i in range(2, angka):
+            if angka % i == 0:
+                is_prima = False
+                break
+        
+        if is_prima:
+            prima.append(angka)
+    
+    return prima
+
+
+# Memanggil fungsi untuk n = 50
+hasil = bilangan_prima(50)
+
+# Menampilkan hasil
+print("Bilangan prima dari 1 sampai 50:")
+print(hasil)
